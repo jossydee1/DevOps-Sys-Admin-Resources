@@ -1,0 +1,65 @@
+DevOps/Bash  Codes
+
+
+How to login to a server:
+ssh username@servername
+
+
+To get to the root folder for complete permission:
+sudo su
+
+To get out of the root folder
+exit
+
+
+
+To check if a user exists:
+id username
+
+To create a user with a non-interactive shell:
+adduser username  -s /sbin/nologin        (produces output complaining you cannot log-in)
+adduser username /bin/false                    (will not give out)
+
+
+To check user location folder:
+cat /etc/passwd |grep ravi
+
+
+To give a file all permissions
+chmod ugo+rwx foldername
+
+To change directory permissions for everyone, use “u” for users, “g” for group, “o” for others, and “ugo” or “a” (for all). chmod ugo+rwx foldername to give read, write, and execute to everyone.
+
+To remove permissions in file
+For example, 
+1. remove all permissions:
+chmod ugo-rwx foldername
+2. remove all permissions for group:
+chmod g-rwx foldername
+
+chmod permisions
+Useful url: https://www.ibm.com/docs/en/aix/7.2?topic=c-chmod-command#chmod__row-d3e95640
+
+
+To check files in a directory and their permissions ls -la
+
+
+Linux TimeZones Setting
+Useful url: https://linuxize.com/post/how-to-set-or-change-timezone-in-linux/
+
+1. To check the timezone:
+       timedatectl
+2. To see available timezones:
+       timedatectl list-timezones
+3. To set the timezone (e.g set to America/New_York):
+       sudo timedatectl set-timezone America/New_York
+
+
+
+
+
+
+
+
+
+
